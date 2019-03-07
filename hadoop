@@ -1,0 +1,210 @@
+1c2774fab2bec2ac2645d190f705b
+Compiled by jenkins on Mon Apr 22 10:26:03 PDT 2013
+From source with checksum aef88defdddfb22327a107fbd7063395
+[hadoop@localhost ~]$ sudi
+bash: sudi: command not found
+[hadoop@localhost ~]$ sudo
+usage: sudo [-D level] -h | -K | -k | -V
+usage: sudo -v [-AknS] [-D level] [-g groupname|#gid] [-p prompt] [-u user
+            name|#uid]
+usage: sudo -l[l] [-AknS] [-D level] [-g groupname|#gid] [-p prompt] [-U user
+            name] [-u user name|#uid] [-g groupname|#gid] [command]
+usage: sudo [-AbEHknPS] [-r role] [-t type] [-C fd] [-D level] [-g
+            groupname|#gid] [-p prompt] [-u user name|#uid] [-g groupname|#gid]
+            [VAR=value] [-i|-s] [<command>]
+usage: sudo -e [-AknS] [-r role] [-t type] [-C fd] [-D level] [-g
+            groupname|#gid] [-p prompt] [-u user name|#uid] file ...
+[hadoop@localhost ~]$ su
+암호:
+[root@localhost hadoop]# sudo -u hdfs namenode -format
+sudo: namenode: command not found
+[root@localhost hadoop]# mkdir
+mkdir: missing operand
+더 많은 정보를 보려면 `mkdir --help' 하십시오.
+[root@localhost hadoop]# mkdir/dfs/data
+bash: mkdir/dfs/data: 그런 파일이나 디렉터리가 없습니다
+[root@localhost hadoop]# java -version
+java version "1.6.0_41"
+OpenJDK Runtime Environment (IcedTea6 1.13.13) (rhel-1.13.13.1.el6_8-x86_64)
+OpenJDK 64-Bit Server VM (build 23.41-b41, mixed mode)
+[root@localhost hadoop]# sudo rpm --import http://archive.cloudera.com/cdh4/redhat/6/x86_64/cdh/RPM-GPG-KEY-cloudera
+[root@localhost hadoop]# sudo rpm -ivh http://archive.cloudera.com/cdh4/one-click-install/redhat/6/x86_64/cloudera-cdh-4-0.x86_64.rpm
+http://archive.cloudera.com/cdh4/one-click-install/redhat/6/x86_64/cloudera-cdh-4-0.x86_64.rpm(을)를 복구합니다
+준비 중...               ########################################### [100%]
+	cloudera-cdh-4-0.x86_64 패키지는 이미 설치되어 있습니다
+[root@localhost hadoop]# Retrieving http://archive.cloudera.com/cdh4/one-click-install/redhat/6/x86_64/cloudera-cdh-4-0.x86_64.rpm
+bash: Retrieving: command not found
+[root@localhost hadoop]# ^C
+[root@localhost hadoop]# rpm -ql cloudera -cdh
+rpm: --hash (-h) 옵션은 패키지 설치시에만 지정할 수 있습니다
+[root@localhost hadoop]# rpm -ql cloudera -cdh
+rpm: --hash (-h) 옵션은 패키지 설치시에만 지정할 수 있습니다
+[root@localhost hadoop]# rpm -ql cloudera-cdh
+/etc/pki/rpm-gpg
+/etc/pki/rpm-gpg/RPM-GPG-KEY-cloudera
+/etc/yum.repos.d/cloudera-cdh4.repo
+/usr/share/doc/cloudera-cdh-4
+/usr/share/doc/cloudera-cdh-4/LICENSE
+[root@localhost hadoop]# sudo gedit /etc/yum.repos.d/cloudera-cdh4.repo
+[root@localhost hadoop]# yum installed | grep hadoop
+No such command: installed. Please use /usr/bin/yum --help
+[root@localhost hadoop]# yum list installed | grep hadoop
+hadoop.x86_64           2.0.0+960-1.cdh4.2.1.p0.9.el6
+hadoop-0.20-conf-pseudo.x86_64
+hadoop-0.20-mapreduce.x86_64
+hadoop-0.20-mapreduce-jobtracker.noarch
+hadoop-0.20-mapreduce-tasktracker.noarch
+hadoop-hdfs.x86_64      2.0.0+960-1.cdh4.2.1.p0.9.el6
+hadoop-hdfs-datanode.x86_64
+hadoop-hdfs-namenode.x86_64
+hadoop-hdfs-secondarynamenode.x86_64
+[root@localhost hadoop]# hadoop version
+Hadoop 2.0.0-cdh4.2.1
+Subversion file:///data/1/jenkins/workspace/generic-package-rhel64-6-0/topdir/BUILD/hadoop-2.0.0-cdh4.2.1/src/hadoop-common-project/hadoop-common -r 144bd548d481c2774fab2bec2ac2645d190f705b
+Compiled by jenkins on Mon Apr 22 10:26:03 PDT 2013
+From source with checksum aef88defdddfb22327a107fbd7063395
+[root@localhost hadoop]# view /etc/passwd
+[root@localhost hadoop]# sudo -u hdfs hdfs namenode -format
+19/03/08 01:06:03 INFO namenode.NameNode: STARTUP_MSG: 
+/************************************************************
+STARTUP_MSG: Starting NameNode
+STARTUP_MSG:   host = localhost.localdomain/127.0.0.1
+STARTUP_MSG:   args = [-format]
+STARTUP_MSG:   version = 2.0.0-cdh4.2.1
+STARTUP_MSG:   classpath = /etc/hadoop/conf:/usr/lib/hadoop/lib/commons-digester-1.8.jar:/usr/lib/hadoop/lib/commons-io-2.1.jar:/usr/lib/hadoop/lib/commons-math-2.1.jar:/usr/lib/hadoop/lib/commons-httpclient-3.1.jar:/usr/lib/hadoop/lib/jersey-core-1.8.jar:/usr/lib/hadoop/lib/jline-0.9.94.jar:/usr/lib/hadoop/lib/protobuf-java-2.4.0a.jar:/usr/lib/hadoop/lib/commons-codec-1.4.jar:/usr/lib/hadoop/lib/jsch-0.1.42.jar:/usr/lib/hadoop/lib/jsr305-1.3.9.jar:/usr/lib/hadoop/lib/commons-logging-1.1.1.jar:/usr/lib/hadoop/lib/jaxb-impl-2.2.3-1.jar:/usr/lib/hadoop/lib/snappy-java-1.0.4.1.jar:/usr/lib/hadoop/lib/avro-1.7.3.jar:/usr/lib/hadoop/lib/slf4j-api-1.6.1.jar:/usr/lib/hadoop/lib/jasper-runtime-5.5.23.jar:/usr/lib/hadoop/lib/commons-collections-3.2.1.jar:/usr/lib/hadoop/lib/kfs-0.3.jar:/usr/lib/hadoop/lib/servlet-api-2.5.jar:/usr/lib/hadoop/lib/stax-api-1.0.1.jar:/usr/lib/hadoop/lib/jetty-util-6.1.26.cloudera.2.jar:/usr/lib/hadoop/lib/jackson-mapper-asl-1.8.8.jar:/usr/lib/hadoop/lib/jackson-jaxrs-1.8.8.jar:/usr/lib/hadoop/lib/jersey-server-1.8.jar:/usr/lib/hadoop/lib/mockito-all-1.8.5.jar:/usr/lib/hadoop/lib/jets3t-0.6.1.jar:/usr/lib/hadoop/lib/commons-net-3.1.jar:/usr/lib/hadoop/lib/xmlenc-0.52.jar:/usr/lib/hadoop/lib/guava-11.0.2.jar:/usr/lib/hadoop/lib/commons-cli-1.2.jar:/usr/lib/hadoop/lib/commons-beanutils-core-1.8.0.jar:/usr/lib/hadoop/lib/commons-beanutils-1.7.0.jar:/usr/lib/hadoop/lib/jersey-json-1.8.jar:/usr/lib/hadoop/lib/jettison-1.1.jar:/usr/lib/hadoop/lib/asm-3.2.jar:/usr/lib/hadoop/lib/paranamer-2.3.jar:/usr/lib/hadoop/lib/jasper-compiler-5.5.23.jar:/usr/lib/hadoop/lib/jsp-api-2.1.jar:/usr/lib/hadoop/lib/commons-el-1.0.jar:/usr/lib/hadoop/lib/jackson-core-asl-1.8.8.jar:/usr/lib/hadoop/lib/slf4j-log4j12-1.6.1.jar:/usr/lib/hadoop/lib/jetty-6.1.26.cloudera.2.jar:/usr/lib/hadoop/lib/junit-4.8.2.jar:/usr/lib/hadoop/lib/jaxb-api-2.2.2.jar:/usr/lib/hadoop/lib/jackson-xc-1.8.8.jar:/usr/lib/hadoop/lib/log4j-1.2.17.jar:/usr/lib/hadoop/lib/activation-1.1.jar:/usr/lib/hadoop/lib/commons-configuration-1.6.jar:/usr/lib/hadoop/lib/commons-lang-2.5.jar:/usr/lib/hadoop/lib/zookeeper-3.4.5-cdh4.2.1.jar:/usr/lib/hadoop/.//hadoop-common-2.0.0-cdh4.2.1.jar:/usr/lib/hadoop/.//hadoop-common.jar:/usr/lib/hadoop/.//hadoop-annotations.jar:/usr/lib/hadoop/.//hadoop-auth.jar:/usr/lib/hadoop/.//hadoop-annotations-2.0.0-cdh4.2.1.jar:/usr/lib/hadoop/.//hadoop-common-2.0.0-cdh4.2.1-tests.jar:/usr/lib/hadoop/.//hadoop-auth-2.0.0-cdh4.2.1.jar:/usr/lib/hadoop-hdfs/./:/usr/lib/hadoop-hdfs/lib/commons-io-2.1.jar:/usr/lib/hadoop-hdfs/lib/jersey-core-1.8.jar:/usr/lib/hadoop-hdfs/lib/jline-0.9.94.jar:/usr/lib/hadoop-hdfs/lib/protobuf-java-2.4.0a.jar:/usr/lib/hadoop-hdfs/lib/commons-codec-1.4.jar:/usr/lib/hadoop-hdfs/lib/jsr305-1.3.9.jar:/usr/lib/hadoop-hdfs/lib/commons-logging-1.1.1.jar:/usr/lib/hadoop-hdfs/lib/jasper-runtime-5.5.23.jar:/usr/lib/hadoop-hdfs/lib/servlet-api-2.5.jar:/usr/lib/hadoop-hdfs/lib/jetty-util-6.1.26.cloudera.2.jar:/usr/lib/hadoop-hdfs/lib/jackson-mapper-asl-1.8.8.jar:/usr/lib/hadoop-hdfs/lib/jersey-server-1.8.jar:/usr/lib/hadoop-hdfs/lib/xmlenc-0.52.jar:/usr/lib/hadoop-hdfs/lib/commons-daemon-1.0.3.jar:/usr/lib/hadoop-hdfs/lib/guava-11.0.2.jar:/usr/lib/hadoop-hdfs/lib/commons-cli-1.2.jar:/usr/lib/hadoop-hdfs/lib/asm-3.2.jar:/usr/lib/hadoop-hdfs/lib/jsp-api-2.1.jar:/usr/lib/hadoop-hdfs/lib/commons-el-1.0.jar:/usr/lib/hadoop-hdfs/lib/jackson-core-asl-1.8.8.jar:/usr/lib/hadoop-hdfs/lib/jetty-6.1.26.cloudera.2.jar:/usr/lib/hadoop-hdfs/lib/log4j-1.2.17.jar:/usr/lib/hadoop-hdfs/lib/commons-lang-2.5.jar:/usr/lib/hadoop-hdfs/lib/zookeeper-3.4.5-cdh4.2.1.jar:/usr/lib/hadoop-hdfs/.//hadoop-hdfs-2.0.0-cdh4.2.1.jar:/usr/lib/hadoop-hdfs/.//hadoop-hdfs.jar:/usr/lib/hadoop-hdfs/.//hadoop-hdfs-2.0.0-cdh4.2.1-tests.jar:/usr/lib/hadoop-yarn/.//*:/usr/lib/hadoop-0.20-mapreduce/./:/usr/lib/hadoop-0.20-mapreduce/lib/commons-digester-1.8.jar:/usr/lib/hadoop-0.20-mapreduce/lib/commons-io-2.1.jar:/usr/lib/hadoop-0.20-mapreduce/lib/commons-math-2.1.jar:/usr/lib/hadoop-0.20-mapreduce/lib/hadoop-fairscheduler-2.0.0-mr1-cdh4.2.1.jar:/usr/lib/hadoop-0.20-mapreduce/lib/commons-httpclient-3.1.jar:/usr/lib/hadoop-0.20-mapreduce/lib/jersey-core-1.8.jar:/usr/lib/hadoop-0.20-mapreduce/lib/jline-0.9.94.jar:/usr/lib/hadoop-0.20-mapreduce/lib/protobuf-java-2.4.0a.jar:/usr/lib/hadoop-0.20-mapreduce/lib/commons-codec-1.4.jar:/usr/lib/hadoop-0.20-mapreduce/lib/jsch-0.1.42.jar:/usr/lib/hadoop-0.20-mapreduce/lib/jsr305-1.3.9.jar:/usr/lib/hadoop-0.20-mapreduce/lib/commons-logging-1.1.1.jar:/usr/lib/hadoop-0.20-mapreduce/lib/jaxb-impl-2.2.3-1.jar:/usr/lib/hadoop-0.20-mapreduce/lib/kfs-0.2.2.jar:/usr/lib/hadoop-0.20-mapreduce/lib/aspectjtools-1.6.5.jar:/usr/lib/hadoop-0.20-mapreduce/lib/snappy-java-1.0.4.1.jar:/usr/lib/hadoop-0.20-mapreduce/lib/avro-1.7.3.jar:/usr/lib/hadoop-0.20-mapreduce/lib/aspectjrt-1.6.5.jar:/usr/lib/hadoop-0.20-mapreduce/lib/slf4j-api-1.6.1.jar:/usr/lib/hadoop-0.20-mapreduce/lib/jasper-runtime-5.5.23.jar:/usr/lib/hadoop-0.20-mapreduce/lib/commons-collections-3.2.1.jar:/usr/lib/hadoop-0.20-mapreduce/lib/kfs-0.3.jar:/usr/lib/hadoop-0.20-mapreduce/lib/servlet-api-2.5.jar:/usr/lib/hadoop-0.20-mapreduce/lib/stax-api-1.0.1.jar:/usr/lib/hadoop-0.20-mapreduce/lib/jetty-util-6.1.26.cloudera.2.jar:/usr/lib/hadoop-0.20-mapreduce/lib/jackson-mapper-asl-1.8.8.jar:/usr/lib/hadoop-0.20-mapreduce/lib/jackson-jaxrs-1.8.8.jar:/usr/lib/hadoop-0.20-mapreduce/lib/jersey-server-1.8.jar:/usr/lib/hadoop-0.20-mapreduce/lib/mockito-all-1.8.5.jar:/usr/lib/hadoop-0.20-mapreduce/lib/jets3t-0.6.1.jar:/usr/lib/hadoop-0.20-mapreduce/lib/commons-net-3.1.jar:/usr/lib/hadoop-0.20-mapreduce/lib/xmlenc-0.52.jar:/usr/lib/hadoop-0.20-mapreduce/lib/guava-11.0.2.jar:/usr/lib/hadoop-0.20-mapreduce/lib/commons-cli-1.2.jar:/usr/lib/hadoop-0.20-mapreduce/lib/commons-beanutils-core-1.8.0.jar:/usr/lib/hadoop-0.20-mapreduce/lib/commons-beanutils-1.7.0.jar:/usr/lib/hadoop-0.20-mapreduce/lib/jersey-json-1.8.jar:/usr/lib/hadoop-0.20-mapreduce/lib/jettison-1.1.jar:/usr/lib/hadoop-0.20-mapreduce/lib/asm-3.2.jar:/usr/lib/hadoop-0.20-mapreduce/lib/paranamer-2.3.jar:/usr/lib/hadoop-0.20-mapreduce/lib/jasper-compiler-5.5.23.jar:/usr/lib/hadoop-0.20-mapreduce/lib/jsp-api-2.1.jar:/usr/lib/hadoop-0.20-mapreduce/lib/commons-el-1.0.jar:/usr/lib/hadoop-0.20-mapreduce/lib/avro-compiler-1.7.3.jar:/usr/lib/hadoop-0.20-mapreduce/lib/hsqldb-1.8.0.10.jar:/usr/lib/hadoop-0.20-mapreduce/lib/jackson-core-asl-1.8.8.jar:/usr/lib/hadoop-0.20-mapreduce/lib/jetty-6.1.26.cloudera.2.jar:/usr/lib/hadoop-0.20-mapreduce/lib/junit-4.8.2.jar:/usr/lib/hadoop-0.20-mapreduce/lib/jaxb-api-2.2.2.jar:/usr/lib/hadoop-0.20-mapreduce/lib/jackson-xc-1.8.8.jar:/usr/lib/hadoop-0.20-mapreduce/lib/log4j-1.2.17.jar:/usr/lib/hadoop-0.20-mapreduce/lib/activation-1.1.jar:/usr/lib/hadoop-0.20-mapreduce/lib/commons-configuration-1.6.jar:/usr/lib/hadoop-0.20-mapreduce/lib/commons-lang-2.5.jar:/usr/lib/hadoop-0.20-mapreduce/lib/zookeeper-3.4.5-cdh4.2.1.jar:/usr/lib/hadoop-0.20-mapreduce/lib/ant-contrib-1.0b3.jar:/usr/lib/hadoop-0.20-mapreduce/.//hadoop-test.jar:/usr/lib/hadoop-0.20-mapreduce/.//hadoop-2.0.0-mr1-cdh4.2.1-tools.jar:/usr/lib/hadoop-0.20-mapreduce/.//hadoop-ant-2.0.0-mr1-cdh4.2.1.jar:/usr/lib/hadoop-0.20-mapreduce/.//hadoop-tools.jar:/usr/lib/hadoop-0.20-mapreduce/.//hadoop-2.0.0-mr1-cdh4.2.1-test.jar:/usr/lib/hadoop-0.20-mapreduce/.//hadoop-core.jar:/usr/lib/hadoop-0.20-mapreduce/.//hadoop-2.0.0-mr1-cdh4.2.1-core.jar:/usr/lib/hadoop-0.20-mapreduce/.//hadoop-ant.jar:/usr/lib/hadoop-0.20-mapreduce/.//hadoop-examples.jar:/usr/lib/hadoop-0.20-mapreduce/.//hadoop-test-2.0.0-mr1-cdh4.2.1.jar:/usr/lib/hadoop-0.20-mapreduce/.//hadoop-tools-2.0.0-mr1-cdh4.2.1.jar:/usr/lib/hadoop-0.20-mapreduce/.//hadoop-2.0.0-mr1-cdh4.2.1-examples.jar:/usr/lib/hadoop-0.20-mapreduce/.//hadoop-examples-2.0.0-mr1-cdh4.2.1.jar:/usr/lib/hadoop-0.20-mapreduce/.//hadoop-2.0.0-mr1-cdh4.2.1-ant.jar:/usr/lib/hadoop-0.20-mapreduce/.//hadoop-core-2.0.0-mr1-cdh4.2.1.jar
+STARTUP_MSG:   build = file:///data/1/jenkins/workspace/generic-package-rhel64-6-0/topdir/BUILD/hadoop-2.0.0-cdh4.2.1/src/hadoop-common-project/hadoop-common -r 144bd548d481c2774fab2bec2ac2645d190f705b; compiled by 'jenkins' on Mon Apr 22 10:26:03 PDT 2013
+STARTUP_MSG:   java = 1.6.0_45
+************************************************************/
+19/03/08 01:06:03 WARN common.Util: Path /var/lib/hadoop-hdfs/cache/hdfs/dfs/name should be specified as a URI in configuration files. Please update hdfs configuration.
+19/03/08 01:06:03 WARN common.Util: Path /var/lib/hadoop-hdfs/cache/hdfs/dfs/name should be specified as a URI in configuration files. Please update hdfs configuration.
+Formatting using clusterid: CID-8f24f3d1-2608-45d4-abba-24691db5c8f1
+19/03/08 01:06:04 INFO util.HostsFileReader: Refreshing hosts (include/exclude) list
+19/03/08 01:06:04 INFO blockmanagement.DatanodeManager: dfs.block.invalidate.limit=1000
+19/03/08 01:06:04 INFO blockmanagement.BlockManager: dfs.block.access.token.enable=false
+19/03/08 01:06:04 INFO blockmanagement.BlockManager: defaultReplication         = 1
+19/03/08 01:06:04 INFO blockmanagement.BlockManager: maxReplication             = 512
+19/03/08 01:06:04 INFO blockmanagement.BlockManager: minReplication             = 1
+19/03/08 01:06:04 INFO blockmanagement.BlockManager: maxReplicationStreams      = 2
+19/03/08 01:06:04 INFO blockmanagement.BlockManager: shouldCheckForEnoughRacks  = false
+19/03/08 01:06:04 INFO blockmanagement.BlockManager: replicationRecheckInterval = 3000
+19/03/08 01:06:04 INFO blockmanagement.BlockManager: encryptDataTransfer        = false
+19/03/08 01:06:04 INFO namenode.FSNamesystem: fsOwner             = hdfs (auth:SIMPLE)
+19/03/08 01:06:04 INFO namenode.FSNamesystem: supergroup          = supergroup
+19/03/08 01:06:04 INFO namenode.FSNamesystem: isPermissionEnabled = true
+19/03/08 01:06:04 INFO namenode.FSNamesystem: HA Enabled: false
+19/03/08 01:06:04 INFO namenode.FSNamesystem: Append Enabled: true
+19/03/08 01:06:04 INFO namenode.NameNode: Caching file names occuring more than 10 times
+19/03/08 01:06:04 INFO namenode.FSNamesystem: dfs.namenode.safemode.threshold-pct = 0.9990000128746033
+19/03/08 01:06:04 INFO namenode.FSNamesystem: dfs.namenode.safemode.min.datanodes = 0
+19/03/08 01:06:04 INFO namenode.FSNamesystem: dfs.namenode.safemode.extension     = 0
+19/03/08 01:06:04 INFO namenode.NNStorage: Storage directory /var/lib/hadoop-hdfs/cache/hdfs/dfs/name has been successfully formatted.
+19/03/08 01:06:04 INFO namenode.FSImage: Saving image file /var/lib/hadoop-hdfs/cache/hdfs/dfs/name/current/fsimage.ckpt_0000000000000000000 using no compression
+19/03/08 01:06:04 INFO namenode.FSImage: Image file of size 119 saved in 0 seconds.
+19/03/08 01:06:04 INFO namenode.NNStorageRetentionManager: Going to retain 1 images with txid >= 0
+19/03/08 01:06:04 INFO util.ExitUtil: Exiting with status 0
+19/03/08 01:06:04 INFO namenode.NameNode: SHUTDOWN_MSG: 
+/************************************************************
+SHUTDOWN_MSG: Shutting down NameNode at localhost.localdomain/127.0.0.1
+************************************************************/
+[root@localhost hadoop]# sudo service hadoop -hdfs-namenode start
+hadoop: 인식되지 않은 서비스
+[root@localhost hadoop]# sudo service hadoop-hdfs-namenode start
+Starting Hadoop namenode:                                  [  OK  ]
+starting namenode, logging to /var/log/hadoop-hdfs/hadoop-hdfs-namenode-localhost.localdomain.out
+sudo se[root@localhost hadoop]# sudo service hadoop-hdfs-datanode start
+Starting Hadoop datanode:                                  [  OK  ]
+starting datanode, logging to /var/log/hadoop-hdfs/hadoop-hdfs-datanode-localhost.localdomain.out
+ps -ef[root@localhost hadoop]# ps -ef | grep hadoop-hdfs | grep -v grep
+hdfs      4205     1  2 01:07 ?        00:00:02 /usr/java/jdk1.6.0_45/bin/java -Dproc_namenode -Xmx1000m -Dhadoop.log.dir=/var/log/hadoop-hdfs -Dhadoop.log.file=hadoop-hdfs-namenode-localhost.localdomain.log -Dhadoop.home.dir=/usr/lib/hadoop -Dhadoop.id.str=hdfs -Dhadoop.root.logger=INFO,RFA -Djava.library.path=/usr/lib/hadoop/lib/native -Dhadoop.policy.file=hadoop-policy.xml -Djava.net.preferIPv4Stack=true -Dhadoop.security.logger=INFO,RFAS org.apache.hadoop.hdfs.server.namenode.NameNode
+hdfs      4306     1  2 01:07 ?        00:00:02 /usr/java/jdk1.6.0_45/bin/java -Dproc_datanode -Xmx1000m -Dhadoop.log.dir=/var/log/hadoop-hdfs -Dhadoop.log.file=hadoop-hdfs-datanode-localhost.localdomain.log -Dhadoop.home.dir=/usr/lib/hadoop -Dhadoop.id.str=hdfs -Dhadoop.root.logger=INFO,RFA -Djava.library.path=/usr/lib/hadoop/lib/native -Dhadoop.policy.file=hadoop-policy.xml -Djava.net.preferIPv4Stack=true -server -Dhadoop.security.logger=INFO,RFAS org.apache.hadoop.hdfs.server.datanode.DataNode
+[root@localhost hadoop]# sudo -u hdfs hdfs dfs -mkdir -p /var/lib/hadoop-hdfs/cache/mapred/mapred/staging
+[root@localhost hadoop]# sudo -u hdfs hdfs dfs -chmod 1777 /var/lib/hadoop-hdfs/cache/mapred/mapred/staging
+[root@localhost hadoop]# sudo -u hdfs gdfs dfs -chown -R mapred /var/l
+lib/   local/ lock/  log/   
+[root@localhost hadoop]# sudo -u hdfs gdfs dfs -chown -R mapred /var/lib/hadoop-hdfs/cache/mapred/mapred/staging
+sudo: gdfs: command not found
+[root@localhost hadoop]# sudo -u hdfs hdfs dfs -chown -R mapred /var/lib/hadoop-hdfs/cache/mapred/mapred/staging
+[root@localhost hadoop]# sudo useradd sampleuser
+[root@localhost hadoop]# sudo -u hdfs hdfs dfs -mkdir -p /user/sampleuser
+[root@localhost hadoop]# sudo -u hdfs hdfs dfs -chown sampleuser  /user/sampleuser
+[root@localhost hadoop]# sudo service hadoop-0.20-mapreduce-jobtracker start
+Starting Hadoop jobtracker daemon (hadoop-jobtracker): starting jobtracker, logging to /var/log/hadoop-0.20-mapreduce/hadoop-hadoop-jobtracker-localhost.localdomain.out
+[root@localhost hadoop]# sudo service hadoop-0.20-mapreduce-tasktracker start
+Starting Hadoop tasktracker daemon (hadoop-tasktracker): starting tasktracker, logging to /var/log/hadoop-0.20-mapreduce/hadoop-hadoop-tasktracker-localhost.localdomain.out
+[root@localhost hadoop]# ps -ef | grep mapreduce | grep -v grep
+root      4750     1  0 01:16 pts/0    00:00:00 su mapred -s /usr/java/jdk1.6.0_45/bin/java -- -Dproc_tasktracker -Xmx1000m -Dhadoop.log.dir=/var/log/hadoop-0.20-mapreduce -Dhadoop.log.file=hadoop-hadoop-tasktracker-localhost.localdomain.log -Dhadoop.home.dir=/usr/lib/hadoop-0.20-mapreduce -Dhadoop.id.str=hadoop -Dhadoop.root.logger=INFO,DRFA -Djava.library.path=/usr/lib/hadoop-0.20-mapreduce/lib/native/Linux-amd64-64 -Dhadoop.policy.file=hadoop-policy.xml -classpath /etc/hadoop/conf:/usr/java/jdk1.6.0_45/lib/tools.jar:/usr/lib/hadoop-0.20-mapreduce:/usr/lib/hadoop-0.20-mapreduce/hadoop-core-2.0.0-mr1-cdh4.2.1.jar:/usr/lib/hadoop-0.20-mapreduce/lib/activation-1.1.jar:/usr/lib/hadoop-0.20-mapreduce/lib/ant-contrib-1.0b3.jar:/usr/lib/hadoop-0.20-mapreduce/lib/asm-3.2.jar:/usr/lib/hadoop-0.20-mapreduce/lib/aspectjrt-1.6.5.jar:/usr/lib/hadoop-0.20-mapreduce/lib/aspectjtools-1.6.5.jar:/usr/lib/hadoop-0.20-mapreduce/lib/avro-1.7.3.jar:/usr/lib/hadoop-0.20-mapreduce/lib/avro-compiler-1.7.3.jar:/usr/lib/hadoop-0.20-mapreduce/lib/commons-beanutils-1.7.0.jar:/usr/lib/hadoop-0.20-mapreduce/lib/commons-beanutils-core-1.8.0.jar:/usr/lib/hadoop-0.20-mapreduce/lib/commons-cli-1.2.jar:/usr/lib/hadoop-0.20-mapreduce/lib/commons-codec-1.4.jar:/usr/lib/hadoop-0.20-mapreduce/lib/commons-collections-3.2.1.jar:/usr/lib/hadoop-0.20-mapreduce/lib/commons-configuration-1.6.jar:/usr/lib/hadoop-0.20-mapreduce/lib/commons-digester-1.8.jar:/usr/lib/hadoop-0.20-mapreduce/lib/commons-el-1.0.jar:/usr/lib/hadoop-0.20-mapreduce/lib/commons-httpclient-3.1.jar:/usr/lib/hadoop-0.20-mapreduce/lib/commons-io-2.1.jar:/usr/lib/hadoop-0.20-mapreduce/lib/commons-lang-2.5.jar:/usr/lib/hadoop-0.20-mapreduce/lib/commons-logging-1.1.1.jar:/usr/lib/hadoop-0.20-mapreduce/lib/commons-math-2.1.jar:/usr/lib/hadoop-0.20-mapreduce/lib/commons-net-3.1.jar:/usr/lib/hadoop-0.20-mapreduce/lib/guava-11.0.2.jar:/usr/lib/hadoop-0.20-mapreduce/lib/hadoop-fairscheduler-2.0.0-mr1-cdh4.2.1.jar:/usr/lib/hadoop-0.20-mapreduce/lib/hsqldb-1.8.0.10.jar:/usr/lib/hadoop-0.20-mapreduce/lib/jackson-core-asl-1.8.8.jar:/usr/lib/hadoop-0.20-mapreduce/lib/jackson-jaxrs-1.8.8.jar:/usr/lib/hadoop-0.20-mapreduce/lib/jackson-mapper-asl-1.8.8.jar:/usr/lib/hadoop-0.20-mapreduce/lib/jackson-xc-1.8.8.jar:/usr/lib/hadoop-0.20-mapreduce/lib/jasper-compiler-5.5.23.jar:/usr/lib/hadoop-0.20-mapreduce/lib/jasper-runtime-5.5.23.jar:/usr/lib/hadoop-0.20-mapreduce/lib/jaxb-api-2.2.2.jar:/usr/lib/hadoop-0.20-mapreduce/lib/jaxb-impl-2.2.3-1.jar:/usr/lib/hadoop-0.20-mapreduce/lib/jersey-core-1.8.jar:/usr/lib/hadoop-0.20-mapreduce/lib/jersey-json-1.8.jar:/usr/lib/hadoop-0.20-mapreduce/lib/jersey-server-1.8.jar:/usr/lib/hadoop-0.20-mapreduce/lib/jets3t-0.6.1.jar:/usr/lib/hadoop-0.20-mapreduce/lib/jettison-1.1.jar:/usr/lib/hadoop-0.20-mapreduce/lib/jetty-6.1.26.cloudera.2.jar:/usr/lib/hadoop-0.20-mapreduce/lib/jetty-util-6.1.26.cloudera.2.jar:/usr/lib/hadoop-0.20-mapreduce/lib/jline-0.9.94.jar:/usr/lib/hadoop-0.20-mapreduce/lib/jsch-0.1.42.jar:/usr/lib/hadoop-0.20-mapreduce/lib/jsp-api-2.1.jar:/usr/lib/hadoop-0.20-mapreduce/lib/jsr305-1.3.9.jar:/usr/lib/hadoop-0.20-mapreduce/lib/junit-4.8.2.jar:/usr/lib/hadoop-0.20-mapreduce/lib/kfs-0.2.2.jar:/usr/lib/hadoop-0.20-mapreduce/lib/kfs-0.3.jar:/usr/lib/hadoop-0.20-mapreduce/lib/log4j-1.2.17.jar:/usr/lib/hadoop-0.20-mapreduce/lib/mockito-all-1.8.5.jar:/usr/lib/hadoop-0.20-mapreduce/lib/paranamer-2.3.jar:/usr/lib/hadoop-0.20-mapreduce/lib/protobuf-java-2.4.0a.jar:/usr/lib/hadoop-0.20-mapreduce/lib/servlet-api-2.5.jar:/usr/lib/hadoop-0.20-mapreduce/lib/slf4j-api-1.6.1.jar:/usr/lib/hadoop-0.20-mapreduce/lib/snappy-java-1.0.4.1.jar:/usr/lib/hadoop-0.20-mapreduce/lib/stax-api-1.0.1.jar:/usr/lib/hadoop-0.20-mapreduce/lib/xmlenc-0.52.jar:/usr/lib/hadoop-0.20-mapreduce/lib/zookeeper-3.4.5-cdh4.2.1.jar:/usr/lib/hadoop-0.20-mapreduce/lib/jsp-2.1/jsp-2.1.jar:/usr/lib/hadoop-0.20-mapreduce/lib/jsp-2.1/jsp-api-2.1.jar:/etc/hadoop/conf:/usr/lib/hadoop/lib/*:/usr/lib/hadoop/.//*:/usr/lib/hadoop-hdfs/./:/usr/lib/hadoop-hdfs/lib/*:/usr/lib/hadoop-hdfs/.//*:/usr/lib/hadoop-yarn/.//*:/usr/lib/hadoop-0.20-mapreduce/./:/usr/lib/hadoop-0.20-mapreduce/lib/*:/usr/lib/hadoop-0.20-mapreduce/.//* org.apache.hadoop.mapred.TaskTracker
+mapred    4753  4750  6 01:16 pts/0    00:00:02 java -Dproc_tasktracker -Xmx1000m -Dhadoop.log.dir=/var/log/hadoop-0.20-mapreduce -Dhadoop.log.file=hadoop-hadoop-tasktracker-localhost.localdomain.log -Dhadoop.home.dir=/usr/lib/hadoop-0.20-mapreduce -Dhadoop.id.str=hadoop -Dhadoop.root.logger=INFO,DRFA -Djava.library.path=/usr/lib/hadoop-0.20-mapreduce/lib/native/Linux-amd64-64 -Dhadoop.policy.file=hadoop-policy.xml -classpath /etc/hadoop/conf:/usr/java/jdk1.6.0_45/lib/tools.jar:/usr/lib/hadoop-0.20-mapreduce:/usr/lib/hadoop-0.20-mapreduce/hadoop-core-2.0.0-mr1-cdh4.2.1.jar:/usr/lib/hadoop-0.20-mapreduce/lib/activation-1.1.jar:/usr/lib/hadoop-0.20-mapreduce/lib/ant-contrib-1.0b3.jar:/usr/lib/hadoop-0.20-mapreduce/lib/asm-3.2.jar:/usr/lib/hadoop-0.20-mapreduce/lib/aspectjrt-1.6.5.jar:/usr/lib/hadoop-0.20-mapreduce/lib/aspectjtools-1.6.5.jar:/usr/lib/hadoop-0.20-mapreduce/lib/avro-1.7.3.jar:/usr/lib/hadoop-0.20-mapreduce/lib/avro-compiler-1.7.3.jar:/usr/lib/hadoop-0.20-mapreduce/lib/commons-beanutils-1.7.0.jar:/usr/lib/hadoop-0.20-mapreduce/lib/commons-beanutils-core-1.8.0.jar:/usr/lib/hadoop-0.20-mapreduce/lib/commons-cli-1.2.jar:/usr/lib/hadoop-0.20-mapreduce/lib/commons-codec-1.4.jar:/usr/lib/hadoop-0.20-mapreduce/lib/commons-collections-3.2.1.jar:/usr/lib/hadoop-0.20-mapreduce/lib/commons-configuration-1.6.jar:/usr/lib/hadoop-0.20-mapreduce/lib/commons-digester-1.8.jar:/usr/lib/hadoop-0.20-mapreduce/lib/commons-el-1.0.jar:/usr/lib/hadoop-0.20-mapreduce/lib/commons-httpclient-3.1.jar:/usr/lib/hadoop-0.20-mapreduce/lib/commons-io-2.1.jar:/usr/lib/hadoop-0.20-mapreduce/lib/commons-lang-2.5.jar:/usr/lib/hadoop-0.20-mapreduce/lib/commons-logging-1.1.1.jar:/usr/lib/hadoop-0.20-mapreduce/lib/commons-math-2.1.jar:/usr/lib/hadoop-0.20-mapreduce/lib/commons-net-3.1.jar:/usr/lib/hadoop-0.20-mapreduce/lib/guava-11.0.2.jar:/usr/lib/hadoop-0.20-mapreduce/lib/hadoop-fairscheduler-2.0.0-mr1-cdh4.2.1.jar:/usr/lib/hadoop-0.20-mapreduce/lib/hsqldb-1.8.0.10.jar:/usr/lib/hadoop-0.20-mapreduce/lib/jackson-core-asl-1.8.8.jar:/usr/lib/hadoop-0.20-mapreduce/lib/jackson-jaxrs-1.8.8.jar:/usr/lib/hadoop-0.20-mapreduce/lib/jackson-mapper-asl-1.8.8.jar:/usr/lib/hadoop-0.20-mapreduce/lib/jackson-xc-1.8.8.jar:/usr/lib/hadoop-0.20-mapreduce/lib/jasper-compiler-5.5.23.jar:/usr/lib/hadoop-0.20-mapreduce/lib/jasper-runtime-5.5.23.jar:/usr/lib/hadoop-0.20-mapreduce/lib/jaxb-api-2.2.2.jar:/usr/lib/hadoop-0.20-mapreduce/lib/jaxb-impl-2.2.3-1.jar:/usr/lib/hadoop-0.20-mapreduce/lib/jersey-core-1.8.jar:/usr/lib/hadoop-0.20-mapreduce/lib/jersey-json-1.8.jar:/usr/lib/hadoop-0.20-mapreduce/lib/jersey-server-1.8.jar:/usr/lib/hadoop-0.20-mapreduce/lib/jets3t-0.6.1.jar:/usr/lib/hadoop-0.20-mapreduce/lib/jettison-1.1.jar:/usr/lib/hadoop-0.20-mapreduce/lib/jetty-6.1.26.cloudera.2.jar:/usr/lib/hadoop-0.20-mapreduce/lib/jetty-util-6.1.26.cloudera.2.jar:/usr/lib/hadoop-0.20-mapreduce/lib/jline-0.9.94.jar:/usr/lib/hadoop-0.20-mapreduce/lib/jsch-0.1.42.jar:/usr/lib/hadoop-0.20-mapreduce/lib/jsp-api-2.1.jar:/usr/lib/hadoop-0.20-mapreduce/lib/jsr305-1.3.9.jar:/usr/lib/hadoop-0.20-mapreduce/lib/junit-4.8.2.jar:/usr/lib/hadoop-0.20-mapreduce/lib/kfs-0.2.2.jar:/usr/lib/hadoop-0.20-mapreduce/lib/kfs-0.3.jar:/usr/lib/hadoop-0.20-mapreduce/lib/log4j-1.2.17.jar:/usr/lib/hadoop-0.20-mapreduce/lib/mockito-all-1.8.5.jar:/usr/lib/hadoop-0.20-mapreduce/lib/paranamer-2.3.jar:/usr/lib/hadoop-0.20-mapreduce/lib/protobuf-java-2.4.0a.jar:/usr/lib/hadoop-0.20-mapreduce/lib/servlet-api-2.5.jar:/usr/lib/hadoop-0.20-mapreduce/lib/slf4j-api-1.6.1.jar:/usr/lib/hadoop-0.20-mapreduce/lib/snappy-java-1.0.4.1.jar:/usr/lib/hadoop-0.20-mapreduce/lib/stax-api-1.0.1.jar:/usr/lib/hadoop-0.20-mapreduce/lib/xmlenc-0.52.jar:/usr/lib/hadoop-0.20-mapreduce/lib/zookeeper-3.4.5-cdh4.2.1.jar:/usr/lib/hadoop-0.20-mapreduce/lib/jsp-2.1/jsp-2.1.jar:/usr/lib/hadoop-0.20-mapreduce/lib/jsp-2.1/jsp-api-2.1.jar:/etc/hadoop/conf:/usr/lib/hadoop/lib/*:/usr/lib/hadoop/.//*:/usr/lib/hadoop-hdfs/./:/usr/lib/hadoop-hdfs/lib/*:/usr/lib/hadoop-hdfs/.//*:/usr/lib/hadoop-yarn/.//*:/usr/lib/hadoop-0.20-mapreduce/./:/usr/lib/hadoop-0.20-mapreduce/lib/*:/usr/lib/hadoop-0.20-mapreduce/.//* org.apache.hadoop.mapred.TaskTracker
+[root@localhost hadoop]# sudo -u sampleuser hadoop jar /usr/lib/hadoop-0.20-mapreduce/hadoop-examples.jar pi 10 100000
+Number of Maps  = 10
+Samples per Map = 100000
+Wrote input for Map #0
+Wrote input for Map #1
+Wrote input for Map #2
+Wrote input for Map #3
+Wrote input for Map #4
+Wrote input for Map #5
+Wrote input for Map #6
+Wrote input for Map #7
+Wrote input for Map #8
+Wrote input for Map #9
+Starting Job
+19/03/08 01:18:25 INFO ipc.Client: Retrying connect to server: localhost/127.0.0.1:8021. Already tried 0 time(s); retry policy is RetryUpToMaximumCountWithFixedSleep(maxRetries=10, sleepTime=1 SECONDS)
+19/03/08 01:18:26 INFO ipc.Client: Retrying connect to server: localhost/127.0.0.1:8021. Already tried 1 time(s); retry policy is RetryUpToMaximumCountWithFixedSleep(maxRetries=10, sleepTime=1 SECONDS)
+19/03/08 01:18:27 INFO ipc.Client: Retrying connect to server: localhost/127.0.0.1:8021. Already tried 2 time(s); retry policy is RetryUpToMaximumCountWithFixedSleep(maxRetries=10, sleepTime=1 SECONDS)
+19/03/08 01:18:28 INFO ipc.Client: Retrying connect to server: localhost/127.0.0.1:8021. Already tried 3 time(s); retry policy is RetryUpToMaximumCountWithFixedSleep(maxRetries=10, sleepTime=1 SECONDS)
+19/03/08 01:18:29 INFO ipc.Client: Retrying connect to server: localhost/127.0.0.1:8021. Already tried 4 time(s); retry policy is RetryUpToMaximumCountWithFixedSleep(maxRetries=10, sleepTime=1 SECONDS)
+19/03/08 01:18:30 INFO ipc.Client: Retrying connect to server: localhost/127.0.0.1:8021. Already tried 5 time(s); retry policy is RetryUpToMaximumCountWithFixedSleep(maxRetries=10, sleepTime=1 SECONDS)
+19/03/08 01:18:31 INFO ipc.Client: Retrying connect to server: localhost/127.0.0.1:8021. Already tried 6 time(s); retry policy is RetryUpToMaximumCountWithFixedSleep(maxRetries=10, sleepTime=1 SECONDS)
+19/03/08 01:18:32 INFO ipc.Client: Retrying connect to server: localhost/127.0.0.1:8021. Already tried 7 time(s); retry policy is RetryUpToMaximumCountWithFixedSleep(maxRetries=10, sleepTime=1 SECONDS)
+19/03/08 01:18:33 INFO ipc.Client: Retrying connect to server: localhost/127.0.0.1:8021. Already tried 8 time(s); retry policy is RetryUpToMaximumCountWithFixedSleep(maxRetries=10, sleepTime=1 SECONDS)
+19/03/08 01:18:34 INFO ipc.Client: Retrying connect to server: localhost/127.0.0.1:8021. Already tried 9 time(s); retry policy is RetryUpToMaximumCountWithFixedSleep(maxRetries=10, sleepTime=1 SECONDS)
+19/03/08 01:18:34 ERROR security.UserGroupInformation: PriviledgedActionException as:sampleuser (auth:SIMPLE) cause:java.net.ConnectException: Call From localhost.localdomain/127.0.0.1 to localhost:8021 failed on connection exception: java.net.ConnectException: Connection refused; For more details see:  http://wiki.apache.org/hadoop/ConnectionRefused
+java.net.ConnectException: Call From localhost.localdomain/127.0.0.1 to localhost:8021 failed on connection exception: java.net.ConnectException: Connection refused; For more details see:  http://wiki.apache.org/hadoop/ConnectionRefused
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:39)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:27)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:513)
+	at org.apache.hadoop.net.NetUtils.wrapWithMessage(NetUtils.java:779)
+	at org.apache.hadoop.net.NetUtils.wrapException(NetUtils.java:726)
+	at org.apache.hadoop.ipc.Client.call(Client.java:1229)
+	at org.apache.hadoop.ipc.WritableRpcEngine$Invoker.invoke(WritableRpcEngine.java:225)
+	at org.apache.hadoop.mapred.$Proxy10.getStagingAreaDir(Unknown Source)
+	at org.apache.hadoop.mapred.JobClient.getStagingAreaDir(JobClient.java:1325)
+	at org.apache.hadoop.mapreduce.JobSubmissionFiles.getStagingDir(JobSubmissionFiles.java:102)
+	at org.apache.hadoop.mapred.JobClient$2.run(JobClient.java:952)
+	at org.apache.hadoop.mapred.JobClient$2.run(JobClient.java:946)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at javax.security.auth.Subject.doAs(Subject.java:396)
+	at org.apache.hadoop.security.UserGroupInformation.doAs(UserGroupInformation.java:1408)
+	at org.apache.hadoop.mapred.JobClient.submitJobInternal(JobClient.java:946)
+	at org.apache.hadoop.mapred.JobClient.submitJob(JobClient.java:920)
+	at org.apache.hadoop.mapred.JobClient.runJob(JobClient.java:1369)
+	at org.apache.hadoop.examples.PiEstimator.estimate(PiEstimator.java:297)
+	at org.apache.hadoop.examples.PiEstimator.run(PiEstimator.java:342)
+	at org.apache.hadoop.util.ToolRunner.run(ToolRunner.java:70)
+	at org.apache.hadoop.examples.PiEstimator.main(PiEstimator.java:351)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:39)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+	at java.lang.reflect.Method.invoke(Method.java:597)
+	at org.apache.hadoop.util.ProgramDriver$ProgramDescription.invoke(ProgramDriver.java:72)
+	at org.apache.hadoop.util.ProgramDriver.driver(ProgramDriver.java:144)
+	at org.apache.hadoop.examples.ExampleDriver.main(ExampleDriver.java:64)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:39)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+	at java.lang.reflect.Method.invoke(Method.java:597)
+	at org.apache.hadoop.util.RunJar.main(RunJar.java:208)
+Caused by: java.net.ConnectException: Connection refused
+	at sun.nio.ch.SocketChannelImpl.checkConnect(Native Method)
+	at sun.nio.ch.SocketChannelImpl.finishConnect(SocketChannelImpl.java:599)
+	at org.apache.hadoop.net.SocketIOWithTimeout.connect(SocketIOWithTimeout.java:207)
+	at org.apache.hadoop.net.NetUtils.connect(NetUtils.java:525)
+	at org.apache.hadoop.net.NetUtils.connect(NetUtils.java:489)
+	at org.apache.hadoop.ipc.Client$Connection.setupConnection(Client.java:499)
+	at org.apache.hadoop.ipc.Client$Connection.setupIOstreams(Client.java:593)
+	at org.apache.hadoop.ipc.Client$Connection.access$2000(Client.java:241)
+	at org.apache.hadoop.ipc.Client.getConnection(Client.java:1278)
+	at org.apache.hadoop.ipc.Client.call(Client.java:1196)
+	... 28 more
+[root@localhost hadoop]# 
